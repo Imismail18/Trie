@@ -52,6 +52,10 @@ print(trie.list_words())  # Sorted list of all words
 - **starts_with(prefix)**: O(N) where N is total nodes in subtree
 - **list_words()**: O(N) where N is total nodes
 
+## Contributing
+
+Contributions are welcome! Feel free to submit issues and pull requests.
+
 ## Author
 
 Ismail - [@Imismail18](https://github.com/Imismail18)
