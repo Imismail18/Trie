@@ -12,6 +12,7 @@ A robust Trie (prefix tree) implementation in Python with full functionality for
 - **Input Validation**: Handle edge cases like empty strings
 - **Type Hints**: Full Python type annotations
 - **Sorted Output**: Words returned in sorted order
+- **Itereting***: Loops throgh the elements of the Trie
 
 ## Usage
 
@@ -51,6 +52,15 @@ print(trie.list_words())  # Sorted list of all words
 - **has_prefix(prefix)**: O(M) where M is prefix length
 - **starts_with(prefix)**: O(N) where N is total nodes in subtree
 - **list_words()**: O(N) where N is total nodes
+- **itereitng**: O(N) where N is total nodes
+
+## Project Structure
+
+```text
+Stack/
+├── trie.py
+├── README.md
+```
 
 ## Contributing
 
