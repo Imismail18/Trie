@@ -1,9 +1,3 @@
-"""
-Structure of comments:
-Function description.
-Time complexity O()
-"""
-
 class TNode:
     # Initialize a Trie node with empty children dictionary and mark as not end of word.
     # Time complexity O(1)
@@ -15,18 +9,19 @@ class TNode:
 class Trie:
     # Initialize the Trie with a root node.
     # Time complexity O(1)
-    def __init__(self):
-        self.root = TNode()
+    def __init__(self): self.root = TNode()
 
     # Return the total number of words stored in the Trie.
     # Time complexity O(N) where N is the total number of nodes
-    def __len__(self):
-        return len(self.list_words())
+    def __len__(self): return len(self.list_words())
+
+    # iteret over the items of the trie
+    # Time complexity: O()
+    def __iter__(self): return iter(self.list_words())
 
     # Return string representation of all words in the Trie separated by spaces.
     # Time complexity O(N) where N is the total number of nodes
-    def __repr__(self):
-        return " ".join(self.list_words())
+    def __repr__(self): return " ".join(self.list_words())
 
     # Check if a word exists in the Trie using the 'in' operator.
     # Time complexity O(M) where M is the length of the word
@@ -42,8 +37,7 @@ class Trie:
     # Insert a word into the Trie by creating nodes for each character if not exist.
     # Time complexity O(M) where M is the length of the word
     def insert(self, word: str) -> bool:
-        if not word:  # Empty string validation
-            return False
+        if not word: return False # Empty string validation
         curr_node = self.root
 
         for c in word:
@@ -106,8 +100,7 @@ class Trie:
     
     # Deprecated: Use starts_with() instead. Kept for backward compatibility.
     # Time complexity O(N) where N is the total number of nodes in the subtree
-    def start_with(self, prefix):
-        return self.starts_with(prefix)
+    def start_with(self, prefix): return self.starts_with(prefix)
 
     # Return a list of all words stored in the Trie.
     # Time complexity O(N) where N is the total number of nodes
@@ -172,6 +165,7 @@ if __name__ == "__main__":
     print("Trie contents:", T)
     print("'henry' in Trie:", "henry" in T)
 
+    for i in T: print(i)
 
     print("==" * 30, "\nTrie - End\n")
     print()
