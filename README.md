@@ -57,9 +57,9 @@ print(trie.list_words())  # Sorted list of all words
 ## Project Structure
 
 ```text
-Stack/
-├── trie.py
-├── README.md
+📂 Trie/
+├── 📄 trie.py
+├── 📄 README.md
 ```
 
 ## Contributing
